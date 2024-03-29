@@ -1,6 +1,6 @@
 package queue;
-import list.GenericNode;
-import list.UnorderedLinkedList;
+import GenericNode;
+import UnorderedLinkedList;
 
 public class QueueLinkedList <T> {
 
