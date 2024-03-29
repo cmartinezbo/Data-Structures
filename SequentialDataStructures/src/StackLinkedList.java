@@ -1,6 +1,6 @@
 package stackR;
-import list.GenericNode;
-import list.UnorderedLinkedList;
+import GenericNode;
+import UnorderedLinkedList;
 
 public class StackLinkedList <T> {
 
