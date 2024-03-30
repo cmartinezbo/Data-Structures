@@ -1,0 +1,94 @@
+package com.mycompany.asignaturas;
+
+import java.util.Random;
+
+public class Asignaturas {
+
+    public static void main(String[] args) {
+        int personas = 100000;
+        String[] nombres = {"Juan", "Manuel", "Luis", "Ana", "Pedro", "Sofia",
+            "Carlos", "Laura", "Diego", "Elena", "Antonio", "Isabel", "Miguel",
+            "Carmen", "Francisco", "Marta", "Javier", "Paula", "Jorge", "Patricia",
+            "Alberto", "Rocio", "Raul", "Beatriz", "Fernando", "Nuria", "Alejandro",
+            "Sara", "David", "Raquel", "Joaquin", "Eva", "Pablo", "Silvia", "Monica",
+            "Cristina", "Roberto", "Alicia", "Mariano", "Gemma", "Victor", "Nerea",
+            "Ruben", "Cristina", "Ester", "Sandra", "Angel", "Noelia", "Felipe",
+            "Mohamed"};
+        String[] apellidos = {"Gomez", "Rodriguez", "Gonzalez", "Fernandez",
+            "Lopez", "Martinez", "Sanchez", "Perez", "Garcia", "Martin", "Torres",
+            "Diaz", "Sabogal", "Jimenez", "Ruiz", "Alvarez", "Hernandez", "Osorio",
+            "Vazquez", "Serrano", "Romero", "Santiago", "Ramos", "Medina", "Arias",
+            "Santos", "Castillo", "Cortes", "Garrido", "Vega", "Molina", "Blanco",
+            "Mendez", "Herrera", "Suarez", "Pereira", "Nieto", "Vidal", "Reyes",
+            "Fuentes", "Delgado", "Vargas", "Aguilar", "Ramirez", "Esteban",
+            "Iglesias", "Marquez", "Ferrer", "Gimenez", "Velasquez"};
+        String[] asignaturas = {"Matematicas", "Fisica", "Quimica", "Biologia",
+            "Informatica", "Ingles", "Historia", "Economia", "Literatura",
+            "Filosofia", "Programacion", "Estadistica", "Geografia", "Arte",
+            "Derecho", "Psicologia", "Sociologia", "Antropologia", "Medicina",
+            "Ingenieria", "Administracion", "Educacion", "Musica", "Astronomia",
+            "Arquitectura", "Marketing", "Comunicacion", "Ciencias Politicas",
+            "Idiomas", "Gestion Empresarial", "Biomedicina", "Ciencias Ambientales",
+            "Ciencias de la Salud", "Ciencias de la Computacion", "Ecologia",
+            "Farmacia", "Odontologia", "Veterinaria", "Nanotecnologia", "Geologia",
+            "Relaciones Internacionales", "Turismo", "Nutricion", "Optica", "Teatro",
+            "Cine", "Literatura", "Danza", "Periodismo", "Artes Plasticas",
+            "Filologia", "Robotica", "Ciberseguridad", "Bioquimica", "Paleontologia",
+            "Genetica", "Criminologia", "Oceanografia", "Neurociencia",
+            "Endocrinologia", "Bioinformatica", "Meteorologia", "Arqueologia",
+            "Ingenieria Biomedica", "Biotecnologia", "Biomecanica", "Biogeoquimica",
+            "Cristalografia", "Fitopatologia", "Fotonica", "Geofisica",
+            "Gerontologia", "Hidrogeologia", "Inmunologia", "Malacologia",
+            "Microbiologia", "Mineralogia", "Morfologia", "Nefrologia", "Neurologia",
+            "Ornitologia", "Paleobotanica", "Paleozoologia", "Parasitologia",
+            "Pediatria", "Psiquiatria", "Radiologia", "Reumatologia", "Toxicologia",
+            "Urologia", "Virologia", "Zoologia", "Anatomia", "Botanica",
+            "Entomologia", "Fisiologia", "Histologia", "Zoologia", "Agricultura",
+            "Bioetica"};
+        int[] codigos = {967, 440, 436, 469, 321, 998, 732, 622, 219, 325, 101,
+            292, 192, 331, 910, 503, 372, 955, 422, 444, 887, 364, 152, 385, 706,
+            193, 474, 342, 506, 775, 545, 222, 852, 324, 198, 919, 225, 728, 730,
+            544, 735, 625, 247, 413, 667, 333, 401, 307, 719, 882, 975, 854, 963,
+            353, 398, 949, 265, 117, 857, 946, 189, 709, 860, 343, 245, 753, 346,
+            843, 301, 379, 434, 228, 262, 654, 423, 466, 103, 959, 911, 907, 400,
+            820, 881, 987, 805, 684, 718, 953, 575, 966, 557, 694, 355, 876, 305,
+            443, 531, 611, 456, 125};
+        String[] horas = {"07:00-09:00", "09:00-11:00", "11:00-13:00",
+            "14:00-16:00", "16:00-18:00", "18:00-20:00"};
+        String[] dias = {"lunes-miercoles", "lunes-jueves", "martes-jueves",
+            "martes-viernes", "miercoles-viernes"};
+        int[] edificios = {143, 546, 785, 615, 664, 261, 175, 436, 397, 686, 542,
+            480, 508, 685, 620, 330, 243, 185, 703, 645, 388, 376, 281, 313, 490,
+            456, 552, 681, 308, 642, 725, 741, 347, 476, 680, 745, 199, 182, 439,
+            749, 377, 656, 159, 800, 589, 117, 603, 467, 778, 103, 734, 382, 597,
+            786, 287, 247, 420, 417, 608, 315, 433, 364, 297, 132, 444, 728, 411,
+            172, 316, 148, 306, 5327, 375, 270, 621, 507, 564, 328, 338, 389, 580,
+            198, 324, 112, 142, 346, 310, 455, 766, 356, 205, 429, 244, 211, 135,
+            495, 545, 128, 392, 453};
+        Random random = new Random();
+        int randomNum;
+        for (int i = 0; i < personas; i++) {
+            randomNum = random.nextInt(50);
+            String nombre = nombres[randomNum];
+            randomNum = random.nextInt(50);
+            String apellido = apellidos[randomNum];
+            randomNum = random.nextInt(100);
+            String materia = asignaturas[randomNum];
+            int codigo = codigos[randomNum];
+            randomNum = random.nextInt(6);
+            String hora = horas[randomNum];
+            randomNum = random.nextInt(5);
+            String dia = dias[randomNum];
+            randomNum = random.nextInt(150);
+            String edificio;
+            if (randomNum >= 100) { // un tercio de los salones serán virtuales
+                edificio = "Salon virtual";
+            } else {
+                edificio = String.valueOf(edificios[randomNum]);
+            }
+            Asignatura subject = new Asignatura(codigo, materia, nombre, apellido,
+                    dia, hora, edificio);
+            subject.allInfo();
+        }
+    }
+}
