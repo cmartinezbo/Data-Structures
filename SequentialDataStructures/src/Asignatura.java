@@ -1,15 +1,17 @@
 package com.mycompany.asignaturas;
 
 public class Asignatura {
-    private int codigo;
-    private String materia;
-    private String nombre;
-    private String apellido;
-    private String dia;
-    private String hora;
-    private String edificio;
+    public Integer codigo;
+    public String materia;
+    public String nombre;
+    public String apellido;
+    public String dia;
+    public String hora;
+    public String edificio;
+    public Asignatura next;
 
-    public Asignatura(int codigo, String materia, String nombre, String apellido, String dia, String hora, String edificio) {
+    public Asignatura(int codigo, String materia, String nombre, String apellido,
+                        String dia, String hora, String edificio) {
         this.codigo = codigo;
         this.materia = materia;
         this.nombre = nombre;
@@ -17,8 +19,17 @@ public class Asignatura {
         this.dia = dia;
         this.hora = hora;
         this.edificio = edificio;
+        next=null;
     }
 
+    public Asignatura getNext(){
+        return this.next;
+    }
+
+    public void setNext(Asignatura subject){
+        next=subject;
+    }
+    
     public int getCodigo() {
         return codigo;
     }
@@ -84,3 +95,4 @@ public class Asignatura {
                 + dia + " " + hora + " / Edificio: " + edificio);
     }
 }
+
