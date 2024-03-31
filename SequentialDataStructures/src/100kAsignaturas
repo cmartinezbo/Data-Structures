@@ -2,10 +2,11 @@ package com.mycompany.asignaturas;
 
 import java.util.Random;
 
-public class Asignaturas {
+public class CienMilAsignaturas {
 
     public static void main(String[] args) {
-        int personas = 100000;
+        SinglyLinkedList lista = new SinglyLinkedList();
+        int clases = 100000;
         String[] nombres = {"Juan", "Manuel", "Luis", "Ana", "Pedro", "Sofia",
             "Carlos", "Laura", "Diego", "Elena", "Antonio", "Isabel", "Miguel",
             "Carmen", "Francisco", "Marta", "Javier", "Paula", "Jorge", "Patricia",
@@ -67,7 +68,7 @@ public class Asignaturas {
             495, 545, 128, 392, 453};
         Random random = new Random();
         int randomNum;
-        for (int i = 0; i < personas; i++) {
+        for (int i = 0; i < clases; i++) {
             randomNum = random.nextInt(50);
             String nombre = nombres[randomNum];
             randomNum = random.nextInt(50);
@@ -86,9 +87,10 @@ public class Asignaturas {
             } else {
                 edificio = String.valueOf(edificios[randomNum]);
             }
-            Asignatura subject = new Asignatura(codigo, materia, nombre, apellido,
+            lista.pushBack(codigo, materia, nombre, apellido,
                     dia, hora, edificio);
-            subject.allInfo();
         }
+        lista.display();
     }
 }
+
